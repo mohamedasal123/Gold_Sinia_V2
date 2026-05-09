@@ -208,7 +208,7 @@
               style="background:#1a2614;color:#ffffff;font-size:1rem;font-weight:800;transition:all 0.3s ease;box-shadow:0 10px 20px rgba(0,0,0,0.15);">
               🛒 اطلب الآن — التوصيل لحد بابك
             </a>
-            <p style="text-align:center;font-size:0.7rem;color:#3e4f35;margin-top:0.5rem;font-weight:700;">الدفع عند الاستلام | توصيل خلال 48 ساعة</p>
+            <p style="text-align:center;font-size:0.7rem;color:#3e4f35;margin-top:0.5rem;font-weight:700;">الدفع عند الاستلام | توصيل خلال 72 ساعة</p>
           </div>
         </div>
 
@@ -274,7 +274,7 @@
               style="background:#1a2614;color:#ffffff;font-size:1rem;font-weight:800;transition:all 0.3s ease;box-shadow:0 10px 20px rgba(0,0,0,0.15);">
               🛒 اطلب الآن — التوصيل لحد بابك
             </a>
-            <p style="text-align:center;font-size:0.7rem;color:#3e4f35;margin-top:0.5rem;font-weight:700;">الدفع عند الاستلام | توصيل خلال 48 ساعة</p>
+            <p style="text-align:center;font-size:0.7rem;color:#3e4f35;margin-top:0.5rem;font-weight:700;">الدفع عند الاستلام | توصيل خلال 72 ساعة</p>
           </div>
         </div>
 
@@ -414,7 +414,7 @@ const features = [
 const valueProps = [
   { icon: '🌿', title: 'طبيعي 100% من سيناء',      desc: 'لا إضافات كيميائية — مباشر من المزرعة لمائدتك' },
   { icon: '🏆', title: 'أفضل سعر مضمون',            desc: 'لو لقيت أرخص بنفس الجودة هنرد عليك الفرق' },
-  { icon: '🚚', title: 'توصيل 48 ساعة لكل مصر',      desc: 'الدفع عند الاستلام — مش محتاج تدفع قبل ما تشوف المنتج' },
+  { icon: '🚚', title: 'توصيل 72 ساعة لكل مصر',      desc: 'الدفع عند الاستلام — مش محتاج تدفع قبل ما تشوف المنتج' },
 ];
 
 const guarantees = ['✓ دفع عند الاستلام', '✓ ضمان الجودة', '✓ توصيل لكل المحافظات'];
