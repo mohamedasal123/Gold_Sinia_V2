@@ -7,7 +7,7 @@
         <span class="section-tag">📦 اطلب الآن</span>
         <h2 class="section-title mt-3 mb-3">احجز طلبك الآن</h2>
         <div class="gold-divider"></div>
-        <p class="section-subtitle mx-auto mt-5">اطلب الآن والتوصيل لحد بابك خلال 48 ساعة</p>
+        <p class="section-subtitle mx-auto mt-5">اطلب الآن والتوصيل لحد بابك خلال 72 ساعة</p>
 
         <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
           <a href="https://wa.me/201070503748?text=مرحباً،%20أريد%20الطلب%20من%20سينا%20جولد"
@@ -68,7 +68,7 @@
 
           <div>
             <label class="form-lbl">اختر المنتج *</label>
-            <div class="grid grid-cols-3 gap-3">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
               <div v-for="opt in productOpts" :key="opt.value"
                 @click="form.product = opt.value"
                 class="product-opt rounded-xl p-3 text-center cursor-pointer transition-all duration-200"
@@ -76,6 +76,7 @@
                 <div style="font-size:1.4rem;margin-bottom:4px;">{{ opt.icon }}</div>
                 <div style="font-size:0.75rem;font-weight:700;color:#0F1A0A;line-height:1.2;">{{ opt.label }}</div>
                 <div style="font-size:0.72rem;font-weight:800;color:#C9A84C;margin-top:3px;">{{ opt.price }} ج</div>
+                <div v-if="opt.badge" style="font-size:0.62rem;font-weight:700;color:#059669;margin-top:2px;">{{ opt.badge }}</div>
               </div>
             </div>
           </div>
@@ -106,7 +107,7 @@
             </div>
             <h3 style="font-size:1.6rem;font-weight:900;color:#0F1A0A;margin-bottom:0.5rem;">تم استلام طلبك! 🎉</h3>
             <p style="color:#6B7E64;font-size:1rem;margin-bottom:0.5rem;">هنتواصل معاك خلال ساعات لتأكيد الشحن.</p>
-            <p style="color:#C9A84C;font-weight:700;font-size:0.9rem;">التوصيل لحد بابك خلال 48 ساعة 🚚</p>
+            <p style="color:#C9A84C;font-weight:700;font-size:0.9rem;">التوصيل لحد بابك خلال 72 ساعة 🚚</p>
             <button @click="resetForm" class="btn-gold mt-8 px-8 py-3 rounded-full">تقديم طلب آخر</button>
           </div>
         </Transition>
@@ -135,14 +136,16 @@ const form = ref({ name:'', phone:'', address:'', product:'500ml', message:'' })
 const errors = ref({ name:'', phone:'', address:'' });
 
 const productOpts = [
-  { value:'500ml', icon:'🫙', label:'500 مل', price:'249' },
-  { value:'1L',    icon:'🍶', label:'1 لتر',  price:'499' },
-  { value:'1.5L',  icon:'📦', label:'1.5 لتر',  price:'749' },
-  { value:'pack3', icon:'📦', label:'3 لتر',  price:'1499' },
+  { value:'500ml', icon:'🫙', label:'500 مل',  price:'259' },
+  { value:'1L',    icon:'🍶', label:'1 لتر',   price:'499' },
+  { value:'1.5L',  icon:'📦', label:'1.5 لتر', price:'759' },
+  { value:'2L',    icon:'🎁', label:'2 لتر',   price:'1250', badge:'+ نص لتر هدية 🎁' },
+  { value:'3L',    icon:'📦', label:'3 لتر',   price:'1499', badge:'شحن مجاني 🚚' },
 ];
+
 const trustBadges = [
-  { icon:'🚚', label:'توصيل لكل المحافظات' },
-  { icon:'💳', label:'مش هنختلف علي الدفع يحج' },
+  { icon:'🚚', label:'توصيل لكل المحافظات خلال 72 ساعة' },
+  { icon:'💳', label:'الدفع عند الاستلام 100%' },
   { icon:'↩️', label:'ضمان جودة أو استرداد' },
 ];
 
@@ -162,28 +165,21 @@ const submitForm = async () => {
   isSubmitting.value = true;
   
   try {
-    // حط التوكن والـ ID بتوعك هنا
-    const botToken = '8297488032:AAFNFXyBrhMeXlsdNXWJp5ar7xnK4wMGPzw';;
+    const botToken = '8297488032:AAFNFXyBrhMeXlsdNXWJp5ar7xnK4wMGPzw';
     const chatId = '5956429478';
-    
-    // تنسيق الرسالة اللي هتوصلك على تليجرام
-    const textMessage = `📦 طلب أوردر جديد - سينا جولد 🌿\n\n👤 الاسم: ${form.value.name}\n📱 الموبايل: ${form.value.phone}\n📍 العنوان: ${form.value.address}\n🛍️ المنتج المطلوب: ${form.value.product}\n\n📝 ملاحظات إضافية:\n${form.value.message || 'لا يوجد'}`;
 
-    // إرسال البيانات للـ API بتاع تليجرام
+    const selectedOpt = productOpts.find(o => o.value === form.value.product);
+    const productLabel = selectedOpt ? `${selectedOpt.label} — ${selectedOpt.price} جنيه${selectedOpt.badge ? ' ('+selectedOpt.badge+')' : ''}` : form.value.product;
+    
+    const textMessage = `📦 طلب أوردر جديد - سينا جولد 🌿\n\n👤 الاسم: ${form.value.name}\n📱 الموبايل: ${form.value.phone}\n📍 العنوان: ${form.value.address}\n🛍️ المنتج المطلوب: ${productLabel}\n\n📝 ملاحظات إضافية:\n${form.value.message || 'لا يوجد'}`;
+
     const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text: textMessage,
-      }),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: chatId, text: textMessage }),
     });
 
-    if (!response.ok) {
-      throw new Error('فشل الإرسال لتليجرام');
-    }
+    if (!response.ok) throw new Error('فشل الإرسال لتليجرام');
 
     showSuccess.value = true;
     setTimeout(() => {
@@ -208,6 +204,12 @@ onMounted(() => {
   gsap.to('.form-header', { scrollTrigger:{trigger:'.form-header',start:'top 85%'}, y:0,opacity:1,duration:0.8,ease:'power3.out' });
   gsap.to('.form-card',   { scrollTrigger:{trigger:'.form-card',  start:'top 85%'}, scale:1,opacity:1,duration:0.8,ease:'back.out(1.2)' });
   gsap.to('.form-trust',  { scrollTrigger:{trigger:'.form-trust', start:'top 90%'}, y:0,opacity:1,duration:0.6,delay:0.3 });
+
+  window.addEventListener('select-product', (e) => {
+    const { size } = e.detail;
+    const match = productOpts.find(o => o.value === size);
+    if (match) form.value.product = match.value;
+  });
 });
 </script>
 
