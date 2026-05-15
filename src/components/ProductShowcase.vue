@@ -299,6 +299,7 @@
                 <span style="font-size:2.8rem;font-weight:900;color:#1a2614;line-height:1;">1250</span>
                 <div style="padding-bottom:6px;">
                   <div style="font-size:1rem;color:#1a2614;font-weight:800;line-height:1;">جنيه</div>
+                  <div style="font-size:1.5rem;font-weight:600;text-decoration:line-through;color:#b9321e;line-height:1.4;">1625</div>
                 </div>
               </div>
               <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
