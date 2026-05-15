@@ -81,7 +81,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-5 items-start">
 
         <!-- Card 1: 0.5L -->
         <div class="price-card gsap-fade-up flex flex-col overflow-hidden"
@@ -116,29 +116,23 @@
             <p style="font-size:0.8rem;color:#3e4f35;margin-bottom:16px;line-height:1.6;font-weight:600;">
               معصور بكرة على البارد · حموضة أقل من 0.8% · من مزارع سيناء
             </p>
-<!-- 
-            <ul class="space-y-1.5 mb-5 flex-grow">
-              <li v-for="f in features[0]" :key="f" style="font-size:0.8rem;color:#1a2614;font-weight:700;display:flex;align-items:center;gap:0.5rem;">
-                <span style="color:#ffffff;background:#1a2614;border-radius:50%;width:16px;height:16px;display:flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0;">✓</span>{{ f }}
-              </li>
-            </ul> -->
 
             <div class="mb-5 p-4 rounded-xl" style="background:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.7);">
               <div style="font-size:0.7rem;color:#3e4f35;font-weight:800;margin-bottom:4px;letter-spacing:0.05em;">السعر بعد خصم اليوم</div>
               <div style="display:flex;align-items:flex-end;gap:8px;flex-wrap:wrap;">
-                <span style="font-size:2.4rem;font-weight:900;color:#1a2614;line-height:1;">249</span>
+                <span style="font-size:2.4rem;font-weight:900;color:#1a2614;line-height:1;">259</span>
                 <div style="padding-bottom:5px;">
                   <div style="font-size:0.95rem;color:#1a2614;font-weight:800;line-height:1;">جنيه</div>
                   <div style="font-size:1.5rem;font-weight:600;text-decoration:line-through;color:#b9321e;line-height:1.4;">325</div>
                 </div>
               </div>
               <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
-                <span style="background:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,1);color:#1a2614;font-size:0.72rem;font-weight:800;padding:0.2rem 0.65rem;border-radius:9999px;">💰 وفرت 76 جنيه</span>
+                <span style="background:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,1);color:#1a2614;font-size:0.72rem;font-weight:800;padding:0.2rem 0.65rem;border-radius:9999px;">💰 وفرت 66 جنيه</span>
                 <span style="background:rgba(224,85,53,0.15);border:1px solid rgba(224,85,53,0.3);color:#b9321e;font-size:0.72rem;font-weight:800;padding:0.2rem 0.65rem;border-radius:9999px;">⚡ اليوم فقط</span>
               </div>
             </div>
 
-            <a href="#order" @click.prevent="order('500ml','272')"
+            <a href="#order" @click.prevent="order('500ml','259')"
               class="cta-secondary block text-center py-3.5 rounded-xl font-bold"
               style="font-size:0.95rem;">
               اطلب الآن →
@@ -182,12 +176,6 @@
               معصور بكرة على البارد · حموضة أقل من 0.8% · يكفي العيلة شهر كامل
             </p>
 
-            <!-- <ul class="space-y-2 mb-5 flex-grow">
-              <li v-for="f in features[1]" :key="f" style="font-size:0.82rem;color:#1a2614;font-weight:700;display:flex;align-items:center;gap:0.5rem;">
-                <span style="color:#ffffff;background:#1a2614;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;">✓</span>{{ f }}
-              </li>
-            </ul> -->
-
             <div class="mb-5 p-4 rounded-xl" style="background:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.8);">
               <div style="font-size:0.7rem;color:#3e4f35;font-weight:800;margin-bottom:4px;letter-spacing:0.05em;">السعر بعد خصم اليوم</div>
               <div style="display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;">
@@ -203,7 +191,7 @@
               </div>
             </div>
 
-            <a href="#order" @click.prevent="order('1L','510')"
+            <a href="#order" @click.prevent="order('1L','499')"
               class="block text-center py-4 rounded-xl"
               style="background:#1a2614;color:#ffffff;font-size:1rem;font-weight:800;transition:all 0.3s ease;box-shadow:0 10px 20px rgba(0,0,0,0.15);">
               🛒 اطلب الآن — التوصيل لحد بابك
@@ -212,23 +200,80 @@
           </div>
         </div>
 
-        <!-- Card 3: 1.5L (New Hero Card) -->
+        <!-- Card 3: 1.5L -->
+        <div class="price-card gsap-fade-up flex flex-col overflow-hidden"
+          style="background: linear-gradient(145deg, #dfbc62 0%, #d1ab4e 100%); border:1px solid rgba(255,255,255,0.6);border-radius:1.5rem;box-shadow:0 15px 35px rgba(214,181,92,0.2);transition:all 0.35s cubic-bezier(0.4,0,0.2,1);">
+
+          <div style="height:3px;background:rgba(255,255,255,0.5);"></div>
+
+          <div class="relative overflow-hidden" style="height:240px;">
+            <img src="/assets_v1/poster3.png" alt="زيت سينا جولد 1.5 لتر"
+              class="w-full h-full object-cover img-zoom" style="transition:transform 0.7s ease;" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, #d1ab4e 0%, rgba(209,171,78,0.1) 50%, transparent 100%);"></div>
+            <div style="position:absolute;bottom:14px;right:16px;">
+              <span style="background:rgba(255,255,255,0.9);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.4);color:#a3802e;font-weight:900;font-size:0.85rem;padding:0.3rem 0.8rem;border-radius:9999px;box-shadow:0 4px 10px rgba(0,0,0,0.05);">1.5 لتر</span>
+            </div>
+            <div style="position:absolute;top:12px;left:12px;">
+              <span style="background:rgba(26,38,20,0.85);backdrop-filter:blur(6px);color:#fff;font-weight:700;font-size:0.72rem;padding:0.25rem 0.7rem;border-radius:9999px;border:1px solid rgba(255,255,255,0.2);">💡 خيار التوفير</span>
+            </div>
+            <div style="position:absolute;top:12px;right:12px;">
+              <span style="
+                background:linear-gradient(135deg,rgba(224,85,53,0.9),rgba(185,50,30,0.9));
+                backdrop-filter:blur(6px);color:#fff;font-weight:900;font-size:0.7rem;
+                padding:0.25rem 0.65rem;border-radius:9999px;
+                box-shadow:0 0 10px rgba(224,85,53,0.4);
+              ">خصم 20%</span>
+            </div>
+          </div>
+
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 style="font-size:1.05rem;font-weight:900;color:#1a2614;margin-bottom:6px;line-height:1.3;">
+              زيت زيتون بكر ممتاز من سيناء
+            </h3>
+            <p style="font-size:0.8rem;color:#3e4f35;margin-bottom:16px;line-height:1.6;font-weight:600;">
+              معصور بكرة على البارد · حموضة أقل من 0.8% · عملية واقتصادية
+            </p>
+
+            <div class="mb-5 p-4 rounded-xl" style="background:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.7);">
+              <div style="font-size:0.7rem;color:#3e4f35;font-weight:800;margin-bottom:4px;letter-spacing:0.05em;">السعر بعد خصم اليوم</div>
+              <div style="display:flex;align-items:flex-end;gap:8px;flex-wrap:wrap;">
+                <span style="font-size:2.4rem;font-weight:900;color:#1a2614;line-height:1;">759</span>
+                <div style="padding-bottom:5px;">
+                  <div style="font-size:0.95rem;color:#1a2614;font-weight:800;line-height:1;">جنيه</div>
+                  <div style="font-size:1.5rem;font-weight:600;text-decoration:line-through;color:#b9321e;line-height:1.4;">975</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
+                <span style="background:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,1);color:#1a2614;font-size:0.72rem;font-weight:800;padding:0.2rem 0.65rem;border-radius:9999px;">💰 وفرت 216 جنيه</span>
+                <span style="background:rgba(224,85,53,0.15);border:1px solid rgba(224,85,53,0.3);color:#b9321e;font-size:0.72rem;font-weight:800;padding:0.2rem 0.65rem;border-radius:9999px;">⚡ اليوم فقط</span>
+              </div>
+            </div>
+
+            <a href="#order" @click.prevent="order('1.5L','759')"
+              class="cta-secondary block text-center py-3.5 rounded-xl font-bold"
+              style="font-size:0.95rem;">
+              اطلب الآن →
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: 2L (New Hero Card) -->
         <div class="price-card hero-card gsap-fade-up flex flex-col relative"
           style="background: linear-gradient(145deg, #dfbc62 0%, #d1ab4e 100%); border:1.5px solid #ffffff;border-radius:1.5rem;box-shadow:0 20px 50px rgba(214,181,92,0.3);transition:all 0.35s cubic-bezier(0.4,0,0.2,1);margin-top:18px;">
 
           <div style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:center;z-index:10;pointer-events:none;">
             <div style="transform:translateY(-50%);background:#1a2614;box-shadow:0 4px 20px rgba(0,0,0,0.2);padding:0.35rem 1.1rem;border-radius:9999px;border:1px solid rgba(214,181,92,0.8);display:flex;align-items:center;gap:0.4rem;">
-              <span style="font-size:0.65rem;">⭐</span>
-              <span style="font-size:0.72rem;font-weight:900;color:#fff;letter-spacing:0.05em;white-space:nowrap;">خيار التوفير — قيمة ممتازة</span>
+              <span style="font-size:0.65rem;">🎁</span>
+              <span style="font-size:0.72rem;font-weight:900;color:#fff;letter-spacing:0.05em;white-space:nowrap;">+ نص لتر مجاناً هدية</span>
             </div>
           </div>
 
           <div class="relative overflow-hidden" style="height:260px;border-radius:1.4rem 1.4rem 0 0;">
-            <img src="/assets_v1/poster3.png" alt="زيت سينا جولد 1.5 لتر"
+            <img src="/assets_v1/poster4.png" alt="زيت سينا جولد 2 لتر"
               class="w-full h-full object-cover img-zoom" style="transition:transform 0.7s ease;" />
             <div style="position:absolute;inset:0;background:linear-gradient(to top, #d1ab4e 0%, rgba(209,171,78,0.15) 55%, transparent 100%);"></div>
             <div style="position:absolute;bottom:14px;right:16px;">
-              <span style="background:rgba(255,255,255,0.9);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.4);color:#a3802e;font-weight:900;font-size:0.9rem;padding:0.3rem 0.9rem;border-radius:9999px;box-shadow:0 4px 10px rgba(0,0,0,0.05);">1.5 لتر</span>
+              <span style="background:rgba(255,255,255,0.9);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.4);color:#a3802e;font-weight:900;font-size:0.9rem;padding:0.3rem 0.9rem;border-radius:9999px;box-shadow:0 4px 10px rgba(0,0,0,0.05);">2 لتر</span>
             </div>
             <div style="position:absolute;top:25px;left:12px;">
               <span style="
@@ -236,40 +281,33 @@
                 backdrop-filter:blur(6px);color:#fff;font-weight:900;font-size:0.72rem;
                 padding:0.25rem 0.7rem;border-radius:9999px;
                 box-shadow:0 0 12px rgba(224,85,53,0.5);
-              ">⚡ خصم 20% اليوم فقط</span>
+              ">⚡ هدية مجانية</span>
             </div>
           </div>
 
           <div class="p-6 flex flex-col flex-grow">
             <h3 style="font-size:1.15rem;font-weight:900;color:#1a2614;margin-bottom:6px;line-height:1.3;">
-              زيت زيتون بكر ممتاز من سيناء
+              زيت زيتون بكر ممتاز + هدية
             </h3>
             <p style="font-size:0.82rem;color:#3e4f35;margin-bottom:16px;line-height:1.6;font-weight:600;">
-              معصور بكرة على البارد · حموضة أقل من 0.8% · عملية واقتصادية
+              معصور بكرة على البارد · حموضة أقل من 0.8% · <strong style="color:#1a2614;">2 لتر + نص لتر هدية مجاناً 🎁</strong>
             </p>
-<!-- 
-            <ul class="space-y-2 mb-5 flex-grow">
-              <li v-for="f in features[2]" :key="f" style="font-size:0.82rem;color:#1a2614;font-weight:700;display:flex;align-items:center;gap:0.5rem;">
-                <span style="color:#ffffff;background:#1a2614;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;">✓</span>{{ f }}
-              </li>
-            </ul> -->
 
             <div class="mb-5 p-4 rounded-xl" style="background:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.8);">
-              <div style="font-size:0.7rem;color:#3e4f35;font-weight:800;margin-bottom:4px;letter-spacing:0.05em;">السعر بعد خصم اليوم</div>
+              <div style="font-size:0.7rem;color:#3e4f35;font-weight:800;margin-bottom:4px;letter-spacing:0.05em;">السعر بعد الخصم والهدية</div>
               <div style="display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap;">
-                <span style="font-size:2.8rem;font-weight:900;color:#1a2614;line-height:1;">749</span>
+                <span style="font-size:2.8rem;font-weight:900;color:#1a2614;line-height:1;">1250</span>
                 <div style="padding-bottom:6px;">
                   <div style="font-size:1rem;color:#1a2614;font-weight:800;line-height:1;">جنيه</div>
-                  <div style="font-size:1.5rem;font-weight:600;text-decoration:line-through;color:#b9321e;line-height:1.4;">975</div>
                 </div>
               </div>
               <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
-                <span style="background:rgba(255,255,255,0.9);border:1px solid #fff;color:#1a2614;font-size:0.72rem;font-weight:800;padding:0.2rem 0.65rem;border-radius:9999px;">💰 وفرت 226 جنيه</span>
+                <span style="background:rgba(255,255,255,0.9);border:1px solid #fff;color:#1a2614;font-size:0.72rem;font-weight:800;padding:0.2rem 0.65rem;border-radius:9999px;">🎁 + نص لتر هدية مجاناً</span>
                 <span style="background:rgba(224,85,53,0.15);border:1px solid rgba(224,85,53,0.3);color:#b9321e;font-size:0.72rem;font-weight:800;padding:0.2rem 0.65rem;border-radius:9999px;">⚡ اليوم فقط</span>
               </div>
             </div>
 
-            <a href="#order" @click.prevent="order('1.5L','850')"
+            <a href="#order" @click.prevent="order('2L','1250')"
               class="block text-center py-4 rounded-xl"
               style="background:#1a2614;color:#ffffff;font-size:1rem;font-weight:800;transition:all 0.3s ease;box-shadow:0 10px 20px rgba(0,0,0,0.15);">
               🛒 اطلب الآن — التوصيل لحد بابك
@@ -278,7 +316,7 @@
           </div>
         </div>
 
-        <!-- Card 4: 3L -->
+        <!-- Card 5: 3L -->
         <div class="price-card gsap-fade-up flex flex-col overflow-hidden"
           style="background: linear-gradient(145deg, #dfbc62 0%, #d1ab4e 100%); border:1px solid rgba(255,255,255,0.6);border-radius:1.5rem;box-shadow:0 15px 35px rgba(214,181,92,0.2);transition:all 0.35s cubic-bezier(0.4,0,0.2,1);">
 
@@ -309,14 +347,8 @@
               طقم زيت سيناء الفاخر
             </h3>
             <p style="font-size:0.8rem;color:#3e4f35;margin-bottom:16px;line-height:1.6;font-weight:600;">
-              معصور بكرة على البارد · هدية مثالية أو للعيلة الكبيرة
+              معصور بكرة على البارد · هدية مثالية أو للعيلة الكبيرة · <strong style="color:#1a2614;">🚚 شحن مجاني</strong>
             </p>
-
-            <!-- <ul class="space-y-1.5 mb-5 flex-grow">
-              <li v-for="f in features[3]" :key="f" style="font-size:0.8rem;color:#1a2614;font-weight:700;display:flex;align-items:center;gap:0.5rem;">
-                <span style="color:#ffffff;background:#1a2614;border-radius:50%;width:16px;height:16px;display:flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0;">✓</span>{{ f }}
-              </li>
-            </ul> -->
 
             <div class="mb-5 p-4 rounded-xl" style="background:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.7);">
               <div style="font-size:0.7rem;color:#3e4f35;font-weight:800;margin-bottom:4px;letter-spacing:0.05em;">السعر بعد خصم اليوم</div>
@@ -329,15 +361,16 @@
               </div>
               <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
                 <span style="background:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,1);color:#1a2614;font-size:0.72rem;font-weight:800;padding:0.2rem 0.65rem;border-radius:9999px;">💰 وفرت 451 جنيه</span>
-                <span style="background:rgba(224,85,53,0.15);border:1px solid rgba(224,85,53,0.3);color:#b9321e;font-size:0.72rem;font-weight:800;padding:0.2rem 0.65rem;border-radius:9999px;">⚡ اليوم فقط</span>
+                <span style="background:rgba(26,180,80,0.15);border:1px solid rgba(26,180,80,0.35);color:#117a38;font-size:0.72rem;font-weight:800;padding:0.2rem 0.65rem;border-radius:9999px;">🚚 شحن مجاني</span>
               </div>
             </div>
 
-            <a href="#order" @click.prevent="order('3L','1700')"
+            <a href="#order" @click.prevent="order('3L','1499')"
               class="cta-secondary block text-center py-3.5 rounded-xl font-bold"
               style="font-size:0.95rem;">
               اطلب الطقم الآن →
             </a>
+            <p style="text-align:center;font-size:0.7rem;color:#117a38;margin-top:0.5rem;font-weight:800;">🚚 شحن مجاني لكل المحافظات</p>
           </div>
         </div>
 
@@ -357,7 +390,7 @@
 
       <div class="mt-8 text-center final-cta gsap-fade-up">
         <p style="color:#ef4444;font-weight:700;font-size:0.85rem;margin-bottom:1rem;">
-          ⚡ خصم 15% اليوم فقط — العرض ينتهي عند منتصف الليل
+          ⚡ خصم 20% اليوم فقط — العرض ينتهي عند منتصف الليل
         </p>
         <a href="#order" @click.prevent="scrollTo('order')" class="text-lg px-10 py-4 rounded-full" style="display: inline-block; background: #d6b55c; color: #fff; font-weight: 900; box-shadow: 0 10px 25px rgba(214,181,92,0.4); text-shadow: 0 1px 2px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.3);">
           🛒 اطلب الآن — الدفع عند الاستلام
@@ -406,9 +439,10 @@ let timerInterval = null;
 /* ── Static data ── */
 const features = [
   ['زيت بكر ممتاز من مزارع سيناء', 'معصور بكرة على البارد', 'حموضة أقل من 0.8%', 'مثالي للتجربة والتذوق'],
-  ['زيت بكر ممتاز من مزارع سيناء', 'معصور بكرة على البارد', 'حموضة أقل من 0.8%', 'يكفي العيلة شهر كامل', 'توفير 60 جنيه عن السعر العادي'],
-  ['زيت بكر ممتاز من مزارع سيناء', 'معصور بكرة على البارد', 'حموضة أقل من 0.8%', 'حجم التوفير والعملية', 'توفير 100 جنيه عن السعر العادي'],
-  ['زيت بكر ممتاز من مزارع سيناء', 'معصور بكرة على البارد', 'حموضة أقل من 0.8%', 'توفير 220 جنيه من السعر الأصلي', 'مثالي للهدايا والعيلة الكبيرة'],
+  ['زيت بكر ممتاز من مزارع سيناء', 'معصور بكرة على البارد', 'حموضة أقل من 0.8%', 'يكفي العيلة شهر كامل', 'توفير 151 جنيه عن السعر العادي'],
+  ['زيت بكر ممتاز من مزارع سيناء', 'معصور بكرة على البارد', 'حموضة أقل من 0.8%', 'حجم التوفير والعملية', 'توفير 216 جنيه عن السعر العادي'],
+  ['زيت بكر ممتاز من مزارع سيناء', 'معصور بكرة على البارد', 'حموضة أقل من 0.8%', '2 لتر + نص لتر هدية مجاناً', 'أفضل قيمة للسعر'],
+  ['زيت بكر ممتاز من مزارع سيناء', 'معصور بكرة على البارد', 'حموضة أقل من 0.8%', 'توفير 451 جنيه من السعر الأصلي', 'مثالي للهدايا والعيلة الكبيرة'],
 ];
 
 const valueProps = [
@@ -465,7 +499,7 @@ onUnmounted(() => { clearInterval(timerInterval); });
 .timer-label { font-size: 0.64rem; color: #a3802e; font-weight: 700; margin-top: 2px; letter-spacing: 0.04em; }
 .timer-colon { font-size: 2rem; font-weight: 900; color: rgba(214,181,92,0.35); line-height: 1; padding-bottom: 18px; }
 
-/* ── Standard card hover (Adjusted for Soft Gold) ── */
+/* ── Standard card hover ── */
 .price-card:hover {
   border-color: #fff !important;
   box-shadow: 0 25px 50px rgba(214,181,92,0.3), 0 0 20px rgba(214,181,92,0.15) !important;
